@@ -15,7 +15,7 @@ class Diario(models.Model):
 
     titulo = models.CharField(max_length=100)
     tags = models.TextField()
-    pessoas = models.ManyToManyField(Pessoa)
+    pessoas = models.ManyToManyField(Pessoa, null=True, blank=True)
     texto = models.TextField()
     create_at = models.DateTimeField(auto_now_add=True)
 

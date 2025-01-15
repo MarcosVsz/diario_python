@@ -13,3 +13,6 @@ def escrever(request):
         pessoas = request.POST.get('pessoas')
         texto = request.POST.get('texto')
         return HttpResponse(f'{titulo} - {tags} - {pessoas} - {texto}')
+def cadastrar_pessoa(request):
+    if request.method == 'GET':
+        return render(request, 'pessoa.html')
